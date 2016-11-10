@@ -14,20 +14,17 @@
 # limitations under the License.
 #
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-
 # Inherit from lemonade device
-$(call inherit-product, device/oneplus/lemonade/device.mk)
+$(call inherit-product, device/oneplus/lemonade/aosp_lemonade.mk)
+
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-lineage
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 PRODUCT_NAME := lineage_lemonade
-PRODUCT_DEVICE := lemonade
-PRODUCT_MANUFACTURER := OnePlus
-PRODUCT_BRAND := OnePlus
 PRODUCT_MODEL := LE2113
 
 PRODUCT_SYSTEM_NAME := OnePlus9_EEA
