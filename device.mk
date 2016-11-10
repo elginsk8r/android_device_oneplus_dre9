@@ -27,8 +27,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
@@ -42,10 +41,5 @@ TARGET_SCREEN_WIDTH := 1080
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_lahaina/mixer_paths.xml
 
-PRODUCT_SHIPPING_API_LEVEL := 30
-
 # Inherit from oneplus sm8350-common
 $(call inherit-product, device/oneplus/sm8350-common/common.mk)
-
-# Inherit from vendor blobs
-$(call inherit-product, vendor/oneplus/lemonade/lemonade-vendor.mk)
