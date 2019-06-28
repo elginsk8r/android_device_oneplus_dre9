@@ -8,13 +8,12 @@
 $(call inherit-product, device/oneplus/lemonade/aosp_lemonade.mk)
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 2400
-TARGET_SCREEN_WIDTH := 1080
+BOOT_ANIMATION_SIZE := 1080p
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Evervolv stuff.
+$(call inherit-product, $(SRC_EVERVOLV_DIR)/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_lemonade
+PRODUCT_NAME := ev_lemonade
 PRODUCT_MODEL := LE2115
 
 PRODUCT_SYSTEM_NAME := OnePlus9
