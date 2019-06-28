@@ -19,12 +19,12 @@ $(call inherit-product, device/oneplus/dre9/aosp_dre9.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-ev
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Evervolv stuff.
+$(call inherit-product, $(SRC_EVERVOLV_DIR)/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_dre9
+PRODUCT_NAME := ev_dre9
 PRODUCT_MODEL := DE2117
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
@@ -35,3 +35,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="OnePlusN200-user 11   release-keys"
 
 BUILD_FINGERPRINT := OnePlus/OnePlusN200/OnePlusN200:11/RKQ1.201217.002/2107241556:user/release-keys
+
+PRODUCT_CODENAME := Dolosus
+BOOT_ANIMATION_SIZE := 1440p
