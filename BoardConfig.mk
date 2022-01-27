@@ -14,10 +14,10 @@
 # limitations under the License.
 #
 
-# Inherit from oneplus sm8350-common
--include device/oneplus/sm8350-common/BoardConfigCommon.mk
+# Inherit from oneplus sm4350-common
+-include device/oneplus/sm4350-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/oneplus/lemonade
+DEVICE_PATH := device/oneplus/dre9
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
@@ -29,4 +29,4 @@ TARGET_SCREEN_DENSITY := 450
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 100
 
 # inherit from the proprietary version
--include vendor/oneplus/lemonade/BoardConfigVendor.mk
+-include vendor/oneplus/dre9/BoardConfigVendor.mk
