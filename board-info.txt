@@ -1,1 +1,2 @@
-require board=lahaina|OnePlus9
+require version-baseband=4.3.1-01032-MANNAR_GEN_PACK-1.493544.2.495443.4
+require version-modem=2022-05-1923:09:32
