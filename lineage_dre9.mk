@@ -14,8 +14,8 @@
 # limitations under the License.
 #
 
-# Inherit from lemonade device
-$(call inherit-product, device/oneplus/lemonade/aosp_lemonade.mk)
+# Inherit from dre9 device
+$(call inherit-product, device/oneplus/dre9/aosp_dre9.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -24,14 +24,14 @@ DEVICE_PACKAGE_OVERLAYS += \
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_lemonade
-PRODUCT_MODEL := LE2113
+PRODUCT_NAME := lineage_dre9
+PRODUCT_MODEL := DE2117
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_DEVICE=OnePlus9 \
-    PRODUCT_NAME=OnePlus9_EEA \
-    PRIVATE_BUILD_DESC="OnePlus9-user 11   release-keys"
+    PRODUCT_DEVICE=OnePlusN200 \
+    PRODUCT_NAME=OnePlusN200 \
+    PRIVATE_BUILD_DESC="OnePlusN200-user 11   release-keys"
 
-BUILD_FINGERPRINT := OnePlus/OnePlus9_EEA/OnePlus9:11/RKQ1.201105.002/2111112053:user/release-keys
+BUILD_FINGERPRINT := OnePlus/OnePlusN200/OnePlusN200:11/RKQ1.201217.002/2107241556:user/release-keys
