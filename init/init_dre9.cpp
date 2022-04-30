@@ -39,7 +39,7 @@
 
 namespace {
 constexpr const char* RO_PROP_SOURCES[] = {
-        nullptr, "product.", "odm.", "vendor.", "system_ext.", "system.", "bootimage.",
+        nullptr, "product.", "odm.", "odm_dlkm.", "vendor.", "vendor_dlkm.", "system_ext.", "system.", "bootimage.",
 };
 
 constexpr const char* BUILD_DESCRIPTION[] = {
